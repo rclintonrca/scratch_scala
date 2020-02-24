@@ -1,5 +1,4 @@
-import Quacks.{LoudQuack, QuietQuack}
-import Flys.{HighFly, LowFly}
+import Strategies.{BigStrategy, HighFly, LoudQuack, LowFly, MediumStrategy, QuietQuack, SmallStrategy}
 
 object App {
 
@@ -17,14 +16,24 @@ object App {
 
     //    a city duck is loud and flies low
     println("SEE THE CITY DUCK...")
-    val cityDuck = Duck(LoudQuack, LowFly)
+    val cityDuck = new Duck(LoudQuack, LowFly, MediumStrategy)
     cityDuck.quack()
 
     // a country duck is quick, but flies HIGH
     println("\nBEHOLD A COUNTRY DUCK...")
-    val countryDuck = Duck(QuietQuack, HighFly)
+    val countryDuck = new Duck(QuietQuack, HighFly, BigStrategy)
     countryDuck.fly()
     countryDuck.quack()
+
+    val delta = {
+      if (cityDuck.height > countryDuck.height) {
+        "bigger than"
+      } else {
+        "smaller than"
+      }
+    }
+
+    println(s"City duck is $delta country duck")
 
     //TODO: should the strategies be objects or classes?
   }

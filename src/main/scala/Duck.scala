@@ -1,7 +1,9 @@
-import Flys.IFlyStrategy
-import Quacks.IQuackStrategy
+import Strategies.{IFlyStrategy, IQuackStrategy, ISizeStrategy}
 
-case class Duck(quackBehavior: IQuackStrategy, flyBehavior: IFlyStrategy) {
+class Duck(quackBehavior: IQuackStrategy, flyBehavior: IFlyStrategy, sizeStrategy: ISizeStrategy) {
+
+  val height: Int = sizeStrategy.height
+
   def fly(): Unit = {
     this.flyBehavior.fly()
   }
