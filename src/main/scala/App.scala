@@ -16,12 +16,12 @@ object App {
 
 
     //    a city duck is loud and flies low
-    println(("SEE THE CITY DUCK..."))
-    val cityDuck = Duck(LoudQuack,  LowFly )
+    println("SEE THE CITY DUCK...")
+    val cityDuck = Duck(LoudQuack, LowFly)
     cityDuck.quack()
 
     // a country duck is quick, but flies HIGH
-    println(("\nBEHOLD A COUNTRY DUCK..."))
+    println("\nBEHOLD A COUNTRY DUCK...")
     val countryDuck = Duck(QuietQuack, HighFly)
     countryDuck.fly()
     countryDuck.quack()
