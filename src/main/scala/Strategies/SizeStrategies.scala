@@ -1,13 +1,13 @@
 package Strategies
 
-object SmallStrategy extends ISizeStrategy {
+object SmallSize extends ISizeStrategy {
   val height: Int = 1
 }
 
-object MediumStrategy extends ISizeStrategy {
+object MediumSize extends ISizeStrategy {
   val height: Int = 2
 }
 
-object BigStrategy extends ISizeStrategy {
+object BigSize extends ISizeStrategy {
   val height: Int = 5
 }

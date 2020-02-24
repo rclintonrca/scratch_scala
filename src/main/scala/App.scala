@@ -1,4 +1,4 @@
-import Strategies.{BigStrategy, HighFly, LoudQuack, LowFly, MediumStrategy, QuietQuack, SmallStrategy}
+import Strategies.{BigSize, HighFly, LoudQuack, LowFly, MediumSize, QuietQuack, SmallSize}
 
 object App {
 
@@ -16,12 +16,12 @@ object App {
 
     //    a city duck is loud and flies low
     println("SEE THE CITY DUCK...")
-    val cityDuck = new Duck(LoudQuack, LowFly, MediumStrategy)
+    val cityDuck = new Duck(LoudQuack, LowFly, MediumSize)
     cityDuck.quack()
 
     // a country duck is quick, but flies HIGH
     println("\nBEHOLD A COUNTRY DUCK...")
-    val countryDuck = new Duck(QuietQuack, HighFly, BigStrategy)
+    val countryDuck = new Duck(QuietQuack, HighFly, BigSize)
     countryDuck.fly()
     countryDuck.quack()
 
