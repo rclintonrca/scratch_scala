@@ -1,6 +1,5 @@
 package Quacks
 
-class IQuackStrategy {
-  def quack(): Unit = {
-  }
+trait IQuackStrategy {
+  def quack(): Unit
 }

@@ -1,6 +1,5 @@
 package Flys
 
-class IFlyStrategy {
-  def fly(): Unit = {
-  }
+trait IFlyStrategy {
+  def fly(): Unit
 }

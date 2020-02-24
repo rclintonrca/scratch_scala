@@ -1,7 +1,7 @@
 package Flys
 
 object LowFly extends IFlyStrategy {
-  override def fly(): Unit = {
+  def fly(): Unit = {
     println("I am flying down low")
   }
 }
